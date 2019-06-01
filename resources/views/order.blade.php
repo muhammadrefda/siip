@@ -60,6 +60,7 @@
       <th scope="col">Admin</th>
       <th scope="col">ID Barang</th>
       <th scope="col">ID Supplier</th>
+      <th scope="col">Aksi</th>
     </tr>
   </thead>
   <tbody>
@@ -67,10 +68,15 @@
     <tr>
       <th scope="row">{{$ta->id_order}}</th>
       <td>{{$ta->tanggal}}</td>
-      <td>{{$ta->jumlah}}</td>
+      <td>{{$ta->jumlah}}</td> 
       <th scope="row">{{$ta->admin}}</th>
       <td>{{$ta->id_barang}}</td>
       <td>{{$ta->id_supplier}}</td>
+      <td>
+        <a href="/order/edit/{{ $ta->id_order }}">Edit</a>
+	
+		<a href="/order/hapus/{{ $ta->id_order }}">Hapus</a>
+      </td>
     </tr>
     @endforeach
   </tbody>
